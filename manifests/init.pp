@@ -78,6 +78,6 @@ class slackmastodon (
   ~> service { 'slack-mastodon.timer':
     ensure  => running,
     enable  => true,
-    require => File['/var/lib/slackmastodon/.config/slackmastodon/config.yml'],
+    require => File['/var/lib/slackmastodon/.config/slack-mastodon/config.yml'],
   }
 }
