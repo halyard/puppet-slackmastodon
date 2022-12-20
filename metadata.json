@@ -1,0 +1,16 @@
+{
+  "name": "halyard-slackmastodon",
+  "version": "0.0.1",
+  "author": "Les Aker",
+  "license": "MIT",
+  "summary": "Configure slackmastodon",
+  "source": "https://github.com/halyard/puppet-slackmastodon",
+  "project_page": "https://github.com/halyard/puppet-slackmastodon",
+  "issues_url": "https://github.com/halyard/puppet-slackmastodon/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+
+  ]
+}

@@ -1,0 +1,6 @@
+[Unit]
+Description=Mirror Mastodon to Slack
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/slack-mastodon update -v
