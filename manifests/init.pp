@@ -22,7 +22,6 @@ class slackmastodon (
 
   $binfile = '/usr/local/bin/slack-mastodon'
   $filename = "slack-mastodon_${downcase($facts['kernel'])}_${arch}"
-  $filename = "goatcounter-dev-linux-${arch}.gz"
   $url = "https://github.com/akerl/slack-mastodon/releases/download/${version}/${filename}"
 
   group { 'slackmastodon':
@@ -38,7 +37,7 @@ class slackmastodon (
     home   => '/var/lib/slackmastodon',
   }
 
-  exec { 'download goatcounter':
+  exec { 'download slackmastodon':
     command => "/usr/bin/curl -sLo '${binfile}' '${url}' && chmod a+x '${binfile}'",
     unless  => "${binfile} version | grep '${version}'",
   }
@@ -64,7 +63,7 @@ class slackmastodon (
 
   file { '/etc/systemd/system/slack-mastodon.service':
     ensure => file,
-    source => 'puppet:///modules/goat/slack-mastodon.service',
+    source => 'puppet:///modules/slackmastodon/slack-mastodon.service',
   }
 
   file { '/etc/systemd/system/slack-mastodon.timer':
