@@ -5,12 +5,16 @@
 # @param slack_channel sets the Slack channel to publish to
 # @param slack_bot_token sets the bot token for the Slack API
 # @param version sets the slack-mastodon tag to use
+# @param bootdelay sets how long to wait before first run
+# @param frequency sets how often to run updates
 class slackmastodon (
   String $mastodon_server,
   String $mastodon_access_token,
   String $slack_channel,
   String $slack_bot_token,
   String $version = 'v0.0.1',
+  String $bootdelay = '300',
+  String $frequency = '300'
 ) {
   $arch = $facts['os']['architecture'] ? {
     'x86_64'  => 'amd64',
