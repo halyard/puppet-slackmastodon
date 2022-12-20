@@ -43,7 +43,7 @@ class slackmastodon (
 
   exec { 'download slackmastodon':
     command => "/usr/bin/curl -sLo '${binfile}' '${url}' && chmod a+x '${binfile}'",
-    unless  => "test -f ${binfile} && ${binfile} version | grep '${version}'",
+    unless  => "/usr/bin/test -f ${binfile} && ${binfile} version | grep '${version}'",
   }
 
   file { [
