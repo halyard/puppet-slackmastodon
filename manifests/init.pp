@@ -21,7 +21,7 @@ class slackmastodon (
   }
 
   $binfile = '/usr/local/bin/slack-mastodon'
-  $filename = "slack-mastodon_${downcase(facts['kernel'])}_${arch}"
+  $filename = "slack-mastodon_${downcase($facts['kernel'])}_${arch}"
   $filename = "goatcounter-dev-linux-${arch}.gz"
   $url = "https://github.com/akerl/slack-mastodon/releases/download/${version}/${filename}"
 
