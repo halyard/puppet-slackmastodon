@@ -49,7 +49,7 @@ class slackmastodon (
   file { [
       '/var/lib/slackmastodon',
       '/var/lib/slackmastodon/.config',
-      '/var/lib/slackmastodon/.config/slackmastodon',
+      '/var/lib/slackmastodon/.config/slack-mastodon',
     ]:
       ensure => directory,
       owner  => 'slackmastodon',
@@ -57,7 +57,7 @@ class slackmastodon (
       mode   => '0750',
   }
 
-  file { '/var/lib/slackmastodon/.config/slackmastodon/config.yml':
+  file { '/var/lib/slackmastodon/.config/slack-mastodon/config.yml':
     ensure  => file,
     mode    => '0640',
     owner   => 'slackmastodon',
