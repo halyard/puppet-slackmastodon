@@ -12,7 +12,7 @@ class slackmastodon (
   String $mastodon_access_token,
   String $slack_channel,
   String $slack_bot_token,
-  String $version = 'v0.0.3',
+  String $version = 'v0.0.4',
   String $bootdelay = '300',
   String $frequency = '300'
 ) {
