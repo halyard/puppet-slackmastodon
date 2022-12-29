@@ -1,7 +1,11 @@
 [Unit]
 Description=Mirror Mastodon to Slack
+StartLimitBurst=2
+StartLimitIntervalSec=271
 
 [Service]
 Type=simple
 User=slackmastodon
 ExecStart=/usr/local/bin/slack-mastodon update -v
+Restart=on-failure
+RestartSec=90
